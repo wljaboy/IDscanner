@@ -1,0 +1,6 @@
+opencv-python
+zxing
+pytesseract
+Pillow
+PyQt6
+auto-py-to-exe 
