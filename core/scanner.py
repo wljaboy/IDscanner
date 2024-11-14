@@ -18,14 +18,18 @@ class WaybillScanner:
         logger.debug("初始化 WaybillScanner...")
         
         try:
+            # 获取应用程序路径
             if getattr(sys, 'frozen', False):
+                # 如果是打包后的可执行文件
                 application_path = os.path.dirname(sys.executable)
+                base_path = sys._MEIPASS  # PyInstaller 的临时目录
             else:
+                # 如果是 Python 脚本
                 application_path = os.path.dirname(os.path.abspath(__file__))
-                application_path = os.path.dirname(application_path)
+                base_path = os.path.dirname(os.path.dirname(application_path))
             
             # 确保 DLL 文件在正确的位置
-            dll_path = os.path.join(application_path, 'dll')
+            dll_path = os.path.join(base_path, 'dll')
             os.makedirs(dll_path, exist_ok=True)
             
             # 复制 DLL 文件到系统临时目录
@@ -44,7 +48,7 @@ class WaybillScanner:
                 os.environ['PATH'] = temp_dir + os.pathsep + os.environ['PATH']
                 
             # 设置Tesseract路径
-            tesseract_path = os.path.join(application_path, 'Tesseract-OCR', 'tesseract.exe')
+            tesseract_path = os.path.join(base_path, 'Tesseract-OCR', 'tesseract.exe')
             logger.debug(f"Tesseract 路径: {tesseract_path}")
             
             if not os.path.exists(tesseract_path):

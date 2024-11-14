@@ -101,7 +101,7 @@ class MainWindow(QMainWindow):
     
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("运单号识别工具")
+        self.setWindowTitle("运单号识别工具 - 作者：永互物流 fgwljd@126.com")
         self.setMinimumSize(800, 600)
         
         # 存储选择的识别区域
@@ -125,6 +125,11 @@ class MainWindow(QMainWindow):
         method_layout.addWidget(self.qrcode_cb)
         method_layout.addWidget(self.text_cb)
         recognition_layout.addLayout(method_layout)
+        
+        # 设置识别方式默认全选
+        self.barcode_cb.setChecked(True)
+        self.qrcode_cb.setChecked(True)
+        self.text_cb.setChecked(True)
         
         # 识别区域
         region_layout = QHBoxLayout()
@@ -238,6 +243,19 @@ class MainWindow(QMainWindow):
         
         # 绑定事件
         self.setup_connections()
+        
+        # 在创建运单号设置后立即设置默认值
+        # 运单号长度范围
+        self.min_length_input.setValue(8)
+        self.max_length_input.setValue(12)
+        
+        # 运单号字符构成默认设置
+        self.uppercase_cb.setChecked(True)  # 大写字母
+        self.digits_cb.setChecked(True)     # 数字
+        self.lowercase_cb.setChecked(False) # 小写字母
+        
+        # 起始字符
+        self.prefix_input.setText("YS")
     
     def setup_connections(self):
         """设置信号连接"""
