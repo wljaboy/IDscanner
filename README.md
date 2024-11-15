@@ -45,13 +45,13 @@
 
 ### 1. 启动软件
 <div align="center">
-<img src="./images/startup.png" width="600" alt="启动界面">
+<img src="./images/processing.png" width="600" alt="启动界面">
 <p><em>软件启动界面</em></p>
 </div>
 
 ### 2. 配置识别参数
 <div align="center">
-<img src="./images/config.png" width="700" alt="参数配置">
+<img src="./images/processing.png" width="700" alt="参数配置">
 <p><em>识别参数配置界面</em></p>
 </div>
 
@@ -83,7 +83,7 @@
 
 ## 🔧 常见问题解决
 
-### 识别准确率问题
+### 文字运单号识别准确率有待提高，处理速度有待多线程和GPU加速
 <div align="center">
 <table>
   <tr>
@@ -100,6 +100,6 @@
 
 <div align="center">
 
-Copyright © 2024 运单号智能识别工具团队. All rights reserved.
+Copyright © 2024 专注物流效率提升工具开发. All rights reserved.
 
 </div>
