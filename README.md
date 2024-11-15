@@ -5,7 +5,7 @@
 ![Version](https://img.shields.io/badge/version-1.2.0-blue.svg)
 ![Platform](https://img.shields.io/badge/platform-windows-lightgrey.svg)
 
-<img src="./images/main_interface.png" width="800" alt="软件主界面">
+<img src="./images/path_settings.png" width="800" alt="软件主界面">
 <p><em>运单号智能识别与重命名工具主界面</em></p>
 </div>
 
@@ -17,13 +17,13 @@
 
 ### 1. 强大的识别能力
 <div align="center">
-<img src="./images/recognition.png" width="600" alt="识别功能展示">
+<img src="./images/path_settings.png" width="600" alt="识别功能展示">
 <p><em>支持多种识别方式，适应不同场景</em></p>
 </div>
 
 ### 2. 高度定制化的运单号设置
 <div align="center">
-<img src="./images/settings.png" width="600" alt="设置界面">
+<img src="./images/path_settings.png" width="600" alt="设置界面">
 <p><em>灵活的运单号规则配置</em></p>
 </div>
 
@@ -31,8 +31,8 @@
 <div align="center">
 <table>
   <tr>
-    <td><img src="./images/file_input.png" width="400" alt="输入管理"></td>
-    <td><img src="./images/file_output.png" width="400" alt="输出管理"></td>
+    <td><img src="./images/path_settings.png" width="400" alt="输入管理"></td>
+    <td><img src="./images/path_settings.png" width="400" alt="输出管理"></td>
   </tr>
   <tr>
     <td align="center"><em>输入文件管理</em></td>
@@ -91,18 +91,12 @@
     <td><img src="./images/bad_sample.png" width="300" alt="问题样本"></td>
   </tr>
   <tr>
-    <td align="center"><em>✅ 推荐的图片样本</em></td>
-    <td align="center"><em>❌ 不推荐的图片样本</em></td>
+
   </tr>
 </table>
 </div>
 
-[... 其他文字内容保持不变 ...]
 
-
-</div>
-
-## 📄 版权信息
 
 <div align="center">
 
