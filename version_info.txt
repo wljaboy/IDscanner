@@ -1,30 +1,15 @@
-﻿VSVersionInfo(
-  ffi=FixedFileInfo(
-    filevers=(1, 0, 0, 0),
-    prodvers=(1, 0, 0, 0),
-    mask=0x3f,
-    flags=0x0,
-    OS=0x40004,
-    fileType=0x1,
-    subtype=0x0,
-    date=(0, 0)
-  ),
-  kids=[
-    StringFileInfo(
-      [
-        StringTable(
-          u'080404b0',
-          [StringStruct(u'CompanyName', u'永互物流'),
-           StringStruct(u'FileDescription', u'运单号识别程序'),
-           StringStruct(u'FileVersion', u'1.0.0'),
-           StringStruct(u'InternalName', u'fgwljd@126.com'),
-           StringStruct(u'LegalCopyright', u'Copyright (C) 2024 永互物流'),
-           StringStruct(u'OriginalFilename', u'fgwljd@126.com'),
-           StringStruct(u'ProductName', u'运单号识别程序'),
-           StringStruct(u'ProductVersion', u'1.0.0'),
-           StringStruct(u'Comments', u'联系方式：fgwljd@126.com')])
-      ]
-    ),
-    VarFileInfo([VarStruct(u'Translation', [2052, 1200])])
-  ]
-)
+# IDscanner v1.2.0 发布说明
+
+## 更新内容
+- 更新扫描器核心功能
+- 优化用户界面
+- 添加构建脚本
+- 添加版本信息管理
+
+## 下载和安装
+1. 下载 IDscanner-v1.2.0.zip
+2. 解压到任意目录
+3. 运行 IDscanner.exe
+
+## 系统要求
+- Windows 7/10/11
