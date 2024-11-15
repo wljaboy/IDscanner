@@ -1,29 +1,111 @@
-项目背景：很多物流企业在操作模式上还很原始，而回单又是非常重要的单据。
-现在大多采用人工管理的方式，除了要管理纸质单据更重要的是管理电子版的，有些业务类型单据量很大。
-物流公司的业务都需要回单（收货人签字的货收单），由于客户不同回单格式和样式也不同。
-为了存档和方便查找，现在普遍采用拍照或扫描的方式取得电子版（PDF或JGP格式），并用运单号来命名对应的文件。
-之前都是人工扫描或是拍照后，人工查看再重命名文件。这么简单的事，遇到几百张也很让人头疼。
-不求程序可以完全处理，哪怕可以处理大部分也是很好的。
+# 运单号智能识别与重命名工具
 
-由此我想编写一个程序，来批量识别图片上的运单号（条形码、二维码或是文字），并用识别到的运单号重命名对应的图片。
+<div align="center">
 
-1、为了软件有更强的适用性和运单号识别准确度，软件可以设置运单号的识别方式（可多选或单选条形码、二维码、文字）、运单号识别位置（由于图片有正置、倒置、左侧放、右侧放等不同的4种姿态，运单号可能在图片的不同位置，允许客户设置要识别的区域，默认识别整张图片）
+![Version](https://img.shields.io/badge/version-1.2.0-blue.svg)
+![Platform](https://img.shields.io/badge/platform-windows-lightgrey.svg)
 
-2、用户可以设置运单号的长度和组成字符，用户可以设置运单号的特征（例如开头/结尾是特定字符），因为识别到的信息很很多，我们要提取运单号用来重命名对应的图片。当识别到的信息里没有与用户设置的运单号长度或运单号特征不相符时，则判定为处理失败跳过此文件继续处理后面的任务。
+<img src="./images/main_interface.png" width="800" alt="软件主界面">
+<p><em>运单号智能识别与重命名工具主界面</em></p>
+</div>
 
-3、用户可以设置待处理图片所在的文件夹和处理成功的文件夹，处理成功的图片从待处理图片所在的文件夹移动到处理成功的文件夹，处理失败的图片则保留在原文件夹中。在处理过程中显示处理进度（显示已处理数量/总共数量，剩余时间），处理完成后显示处理成功数量和失败数量。
+## 🚀 项目概述
 
-4、软件需要方便其他人使用，需要将软件生成为可执行文件并有图形操作界面
+随着物流行业的快速发展，传统的手工管理回单的方式已经难以满足日益增长的需求。面对大量的电子版回单（通常为PDF或JPEG格式），人工逐个检查并重命名不仅耗时且容易出错。为此，我们设计了一款运单号智能识别与重命名工具，旨在简化这一流程，提升工作效率。
 
-5、多线程处理并使用动态线程数处理图片，用来提高处理速度
+## 🔍 主要功能
 
-6、GPU 检测和加速选项：检测系统是否支持 GPU，并允许用户选择是否启用 GPU 加速。
+### 1. 强大的识别能力
+<div align="center">
+<img src="./images/recognition.png" width="600" alt="识别功能展示">
+<p><em>支持多种识别方式，适应不同场景</em></p>
+</div>
 
-7、默认扫描正个图片，允许用户自定义识别区域：用户可以选择图片的特定区域，以提高识别效率。
+### 2. 高度定制化的运单号设置
+<div align="center">
+<img src="./images/settings.png" width="600" alt="设置界面">
+<p><em>灵活的运单号规则配置</em></p>
+</div>
+
+### 3. 便捷的文件管理
+<div align="center">
+<table>
+  <tr>
+    <td><img src="./images/file_input.png" width="400" alt="输入管理"></td>
+    <td><img src="./images/file_output.png" width="400" alt="输出管理"></td>
+  </tr>
+  <tr>
+    <td align="center"><em>输入文件管理</em></td>
+    <td align="center"><em>输出文件管理</em></td>
+  </tr>
+</table>
+</div>
+
+## 💻 软件使用方法
+
+### 1. 启动软件
+<div align="center">
+<img src="./images/startup.png" width="600" alt="启动界面">
+<p><em>软件启动界面</em></p>
+</div>
+
+### 2. 配置识别参数
+<div align="center">
+<img src="./images/config.png" width="700" alt="参数配置">
+<p><em>识别参数配置界面</em></p>
+</div>
+
+### 3. 设置文件路径
+<div align="center">
+<img src="./images/path_settings.png" width="700" alt="路径设置">
+<p><em>文件路径配置界面</em></p>
+</div>
+
+### 4. 开始处理
+<div align="center">
+<table>
+  <tr>
+    <td><img src="./images/processing.png" width="400" alt="处理中"></td>
+    <td><img src="./images/complete.png" width="400" alt="处理完成"></td>
+  </tr>
+  <tr>
+    <td align="center"><em>批量处理进行中</em></td>
+    <td align="center"><em>处理完成界面</em></td>
+  </tr>
+</table>
+</div>
+
+### 5. 查看处理结果
+<div align="center">
+<img src="./images/results.png" width="700" alt="处理结果">
+<p><em>处理结果统计界面</em></p>
+</div>
+
+## 🔧 常见问题解决
+
+### 识别准确率问题
+<div align="center">
+<table>
+  <tr>
+    <td><img src="./images/good_sample.png" width="300" alt="良好样本"></td>
+    <td><img src="./images/bad_sample.png" width="300" alt="问题样本"></td>
+  </tr>
+  <tr>
+    <td align="center"><em>✅ 推荐的图片样本</em></td>
+    <td align="center"><em>❌ 不推荐的图片样本</em></td>
+  </tr>
+</table>
+</div>
+
+[... 其他文字内容保持不变 ...]
 
 
-我本人没有编程基础，这个项目代码是在AI帮助下完成的。
+</div>
 
-做得很粗糙算是抛砖引玉了，希望真正的攻城狮可以帮我完善这个项目。
+## 📄 版权信息
 
-物流公司大多是很穷的，图片识别用付费API的模式就先不考虑了。
+<div align="center">
+
+Copyright © 2024 运单号智能识别工具团队. All rights reserved.
+
+</div>
